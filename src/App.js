@@ -11,7 +11,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Jacks Sticker Store</h2>
         </div>
-        <img src={'http://placehold.it/400x400&text=slide1'}></img>
         <div className="store-item">
           <Checkout
             name={'It is cold comrade'}
