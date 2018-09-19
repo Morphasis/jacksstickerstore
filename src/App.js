@@ -10,11 +10,51 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Jacks Sticker Store</h2>
+        <div className="parallax">
+          <h1>Jacks sticker store</h1>
         </div>
         <div className="store-item">
+          <div className="mooncake"></div>
+          <Checkout
+            name={'It is cold comrade'}
+            description={'A custom 3x3 inch sticker'}
+            amount={3}
+          />
+        </div>
+        <div className="store-item">
+          <div className="mooncake"></div>
+          <Checkout
+            name={'It is cold comrade'}
+            description={'A custom 3x3 inch sticker'}
+            amount={3}
+          />
+        </div>
+        <div className="store-item">
+          <div className="mooncake"></div>
+          <Checkout
+            name={'It is cold comrade'}
+            description={'A custom 3x3 inch sticker'}
+            amount={3}
+          />
+        </div>
+        <div className="store-item">
+          <div className="mooncake"></div>
+          <Checkout
+            name={'It is cold comrade'}
+            description={'A custom 3x3 inch sticker'}
+            amount={3}
+          />
+        </div>
+        <div className="store-item">
+          <div className="mooncake"></div>
+          <Checkout
+            name={'It is cold comrade'}
+            description={'A custom 3x3 inch sticker'}
+            amount={3}
+          />
+        </div>
+        <div className="store-item">
+          <div className="mooncake"></div>
           <Checkout
             name={'It is cold comrade'}
             description={'A custom 3x3 inch sticker'}
