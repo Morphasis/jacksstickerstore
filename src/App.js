@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   updateBasketItems(item_id, item_qnt, item_name) {
-    let item = {"item_id": item_id, "item_name": item_name, "item_qnt": item_qnt};
+    let item = {"item_id": item_id, "item_name": item_name, "item_qnt": parseInt(item_qnt)};
     let basket_array = this.state.basket_items
     basket_array.push(item)
 
