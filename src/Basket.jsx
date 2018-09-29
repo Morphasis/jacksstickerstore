@@ -1,6 +1,8 @@
 import React from 'react'
-import _ from 'lodash'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './index.css';
+import axios from 'axios';
+import PAYMENT_SERVER_URL from './constants/server';
 
 export const RemoveFromBasket = class extends React.Component {
   onRemoveFromBasket() {
@@ -51,10 +53,33 @@ export const AddToBasket = class extends React.Component {
 
 export const Basket = class extends React.Component {
 
+
+
+  render() {
+    return (
+      <div className="basket-wrapper">
+        <FontAwesomeIcon className="basket-icon" icon="shopping-basket" />
+        <div className="notification-icon">{this.props.basketLength}</div>
+      </div>
+    );
+  }
+}
+
+export const Test = class extends React.Component {
+
+  onRemoveFromBasket() {
+    axios.post(PAYMENT_SERVER_URL + '/submitOrder')
+    .then((data) => {
+      console.log(data);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
+
   render() {
     return (
       <div>
-        <FontAwesomeIcon icon="shopping-basket" /> ({this.props.basketLength})
+        <a href="#" onClick={this.onRemoveFromBasket.bind(this)}>Create new order</a>
       </div>
     );
   }

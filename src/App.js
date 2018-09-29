@@ -1,18 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import _ from 'lodash'
-import $ from 'jquery';
-import Popper from 'popper.js';
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Checkout from './Checkout';
-import {AddToBasket, RemoveFromBasket, Basket} from './Basket'
+// import {Checkout, CheckoutForm} from './Checkout';
+// import {AddToBasket, RemoveFromBasket, Basket, Test} from './Basket'
 import './App.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faShoppingBasket)
+import Corgi from './images/corgi2.png'
+import AppBar from './components/AppBar'
+import ShopCardItem from './components/ShopCardItem'
+import BottomNav from './components/BottomNav'
+
+library.add(faShoppingBasket);
 
 class App extends Component {
   constructor(props) {
@@ -28,11 +28,11 @@ class App extends Component {
     let basket_array = this.state.basket_items
     basket_array.push(item)
 
-    function findItemOfQnt(n) {
-      if (n.item_id === item_id) {
-        return n.item_qnt;
-      }
-    }
+    // function findItemOfQnt(n) {
+    //   if (n.item_id === item_id) {
+    //     return n.item_qnt;
+    //   }
+    // }
 
     let basket_amount = _.sumBy(basket_array, function(o) { return o.item_qnt; });
 
@@ -53,16 +53,24 @@ class App extends Component {
       basket_amount: basket_amount
     })
   }
-
   render() {
     return (
-      <div className="App container">
-        <Basket basketLength={this.state.basket_amount}></Basket>
-        <AddToBasket
-          productName="StickerExample1"
+      <div>
+        <AppBar basketLength={this.state.basket_amount}/>
+        <div className="content">
+          <ShopCardItem
+          displayImage={Corgi}
+          productDescription="This fun little corgi sticker is called barry."
+          productName="Barry The Corgi"
           productID="test_id_here_12345"
-          updateBasket={this.updateBasketItems.bind(this)} ></AddToBasket>
-          <RemoveFromBasket productID="test_id_here_12345" removeBasket={this.removeBasketItems.bind(this)}></RemoveFromBasket> <br />
+          updateBasket={this.updateBasketItems.bind(this)}/>
+        <ShopCardItem
+          displayImage={Corgi}
+          productName="Barry The Other Corgi"
+          productID="test_id_here_12345"
+          updateBasket={this.updateBasketItems.bind(this)}/>
+        </div>
+        <BottomNav/>
       </div>
     );
   }
