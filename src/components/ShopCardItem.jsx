@@ -42,11 +42,11 @@ function MediaCard(props) {
             {props.productName}
           </Typography>
           <Typography component="p">
+            Price: £{props.productPrice}
+          </Typography>
+          <Typography component="p">
             {props.productDescription}
           </Typography>
-          <div>
-            <FontAwesomeIcon icon="fa-instagram" /> <a href="https://instagram.com/jacksharville/">@jacksharville</a>.
-          </div>
         </CardContent>
       </CardActionArea>
       <CardActions>
