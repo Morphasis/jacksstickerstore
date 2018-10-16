@@ -13,7 +13,6 @@ import Comraid from './images/comraid.jpg'
 import Banana from './images/banana.jpg'
 
 import AppBar from './components/AppBar'
-import Drawer from './components/Drawer'
 import ShopCardItem from './components/ShopCardItem'
 import BottomNav from './components/BottomNav'
 
@@ -65,7 +64,6 @@ class App extends Component {
       <div>
         <AppBar basketLength={this.state.basket_amount}/>
           <div className="content" style={{flexGrow: 1,}}>
-            // <Drawer></Drawer>
             <Grid container
               direction="row"
               justify="space-between"

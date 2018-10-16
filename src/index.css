@@ -2,8 +2,8 @@ body{
   margin: 0;
 }
 .content{
+  padding-top: 80px;
 }
-padding-top: 80px;
 /* AppBar */
 .appbar-wrapper{
   position: fixed;
@@ -49,4 +49,8 @@ padding-top: 80px;
 }
 .menu-item-link{
   padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.menu-icon-wrapper{
+  padding-top: 5px;
 }

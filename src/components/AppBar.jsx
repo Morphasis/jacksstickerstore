@@ -10,9 +10,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Drawer from './Drawer'
 
 const styles = theme => ({
   root: {
@@ -112,7 +112,7 @@ class PrimarySearchAppBar extends React.Component {
         <AppBar position="fixed">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
+              <Drawer />
             </IconButton>
             <Typography className={classes.title} variant="title" color="inherit" noWrap>
               Change The World With Stickers

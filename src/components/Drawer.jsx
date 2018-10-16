@@ -5,6 +5,7 @@ import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const styles = {
   list: {
@@ -31,7 +32,7 @@ class TemporaryDrawer extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
+        <MenuIcon onClick={this.toggleDrawer('left', true)} className="menu-icon-wrapper" />
         <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
           <div
             tabIndex={0}
