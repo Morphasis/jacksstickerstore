@@ -14,8 +14,6 @@ const styles = {
   card: {
     // maxWidth: 345,
     marginTop: 15,
-    marginLeft: 15,
-    marginRight: 15,
     maxWidth: 350,
   },
   media: {
@@ -50,11 +48,11 @@ function MediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="medium" color="primary">
           Share
         </Button>
         <Button
-          size="small"
+          size="medium"
           variant="contained"
           color="primary"
           onClick={() => updateBasket(props)}>
