@@ -62,7 +62,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AppBar basketLength={this.state.basket_amount}/>
+        <AppBar basketItems={this.state.basket_items} basketLength={this.state.basket_amount}/>
           <div className="content" style={{flexGrow: 1,}}>
             <Grid container
               direction="row"

@@ -10,9 +10,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Drawer from './Drawer'
+import Basket from './Basket'
 
 const styles = theme => ({
   root: {
@@ -121,7 +121,7 @@ class PrimarySearchAppBar extends React.Component {
 
             <IconButton color="inherit">
               <Badge className={classes.margin} badgeContent={this.props.basketLength} color="secondary">
-                <ShoppingBasket />
+                <Basket basketItems={this.props.basketItems} />
               </Badge>
             </IconButton>
           </Toolbar>
